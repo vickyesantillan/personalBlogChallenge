@@ -44,7 +44,7 @@
 form {
   display: flex;
   flex-direction: column;
-  width: 70vw;
+  width: -webkit-fill-available;
 }
 
 form input,
@@ -55,4 +55,8 @@ textarea {
 form p {
   margin-bottom: 0;
   margin-top: 1.5rem;
+}
+
+button {
+  margin-top: 15px;
 }
