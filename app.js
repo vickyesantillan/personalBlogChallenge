@@ -51,11 +51,15 @@ app.get('/posts/:postName', function (req, res) {
 
   posts.forEach(function (post) {
     const postTitle = _.lowerCase(post.title);
-
+    const postContent = post.content;
     if (postTitle === requestTitle) {
-      console.log('Match found');
+      console.log('match');
+      res.render('post', {
+        postTitle: post.title,
+        postContent: postContent
+      });
     } else {
-      console.log('Match not found');
+      console.log('No post found');
     }
   });
 });
